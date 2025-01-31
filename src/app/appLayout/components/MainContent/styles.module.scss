@@ -1,0 +1,11 @@
+@import 'src/styles/variables.module';
+
+.mainOutlet {
+    grid-area: main-outlet;
+
+    @media #{$mobile} {
+        max-width: 100vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

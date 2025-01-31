@@ -1,0 +1,61 @@
+@import 'src/styles/colors.module.scss';
+
+//.star-Container {
+//  position: absolute;
+//  width: 100vw;
+//  height: 100vh;
+//  display: flex;
+//  margin: 20px;
+//  top: 0;
+//  left: 0;
+//  overflow: hidden;
+//  pointer-events: none;
+//}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  //background: rgba(255, 255, 255, 0.4);
+  //background: radial-gradient(circle, rgba(255, 255, 255, 1) 20%, rgba(255, 143, 171, 1) 70%);
+  filter: blur(1px);
+  box-shadow: 0 0 4px 3px rgba($star, 0.7);
+  //transform: scale(0);
+  //transform: scale(1);
+  //animation: appear 0.5s ease-out forwards, fadeOut 1.5s ease-in 0.5s forwards;
+  animation: appear 0.5s ease-out forwards, pulse 1s ease-in-out infinite alternate;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    scale: 1;
+    box-shadow: 0 0 10px 5px rgba($star, 0.6);
+  }
+  100% {
+    scale: 1.1;
+    box-shadow: 0 0 10px 10px rgba($star, 0.6);
+  }
+}

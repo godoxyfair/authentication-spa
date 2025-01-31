@@ -1,0 +1,30 @@
+.wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    //background-color: #0d0a0b;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+//.canvas {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    //width: 100vw;
+//    //height: 100vh;
+//    z-index: -1;  /* На заднем плане */
+//    pointer-events: auto; /* Включаем взаимодействие с холстом */
+//}
+
+.languageToggler {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}

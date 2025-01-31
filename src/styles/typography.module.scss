@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Gothic One;
+  font-weight: 400;
+  src: url('../resources/font/DelaGothicOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: PPNeueMontrealMono-RegularItalic;
+  font-weight: 400;
+  src: url('../resources/font/PPNeueMontrealMono-RegularItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: PPNeueMontrealMono-Regular;
+  font-weight: 400;
+  src: url('../resources/font/PPNeueMontrealMono-Medium.otf') format('truetype');
+}
+
+@mixin font-goth {
+  font-family: Gothic One, sans-serif;
+}
+
+@mixin font-neuMontreal-italic {
+  font-family: PPNeueMontrealMono-RegularItalic, sans-serif;
+}
+
+@mixin font-neuMontreal-regular {
+  font-family: PPNeueMontrealMono-Regular, sans-serif;
+}

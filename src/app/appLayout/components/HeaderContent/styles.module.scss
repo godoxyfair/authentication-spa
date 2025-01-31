@@ -1,0 +1,95 @@
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 56px;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    &.mobile {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 48px;
+        padding: 0 16px;
+    }
+}
+
+.profileLink {
+    display: flex;
+}
+
+.nameWrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    width: 100%;
+}
+
+.mobileShortName {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0 4px 0 8px;
+    color: black;
+    padding-right: 4px;
+}
+
+.icon {
+    color: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.sections {
+    display: flex;
+    margin-right: 183px;
+    color: gray;
+    font-weight: 500;
+}
+
+.section {
+    margin-left: 40px;
+    cursor: pointer;
+
+    a {
+        color: black;
+        font:
+            600 16px/18px Raleway,
+            sans-serif;
+        text-decoration: none;
+
+        &:hover {
+            color: gray;
+        }
+    }
+}
+
+.personal {
+    display: flex;
+    align-items: center;
+    color:black;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}

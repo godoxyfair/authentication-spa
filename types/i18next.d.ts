@@ -1,4 +1,4 @@
-import type { TDefaultNS, TResources } from '@/app/i18n';
+import type { TDefaultNS, TResources } from '../src/app/i18n';
 
 declare module 'i18next' {
     interface CustomTypeOptions {

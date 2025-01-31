@@ -1,0 +1,19 @@
+//@import url('../../../../styles/colors.module.scss');
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 36px;
+    padding: 8px 40px;
+    color: gray;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 12px;
+}

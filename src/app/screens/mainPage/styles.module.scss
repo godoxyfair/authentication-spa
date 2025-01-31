@@ -1,0 +1,101 @@
+@import 'src/styles/colors.module.scss';
+@import 'src/styles/typography.module.scss';
+@import 'src/styles/variables.module.scss';
+
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  height: 100%;
+  flex-direction: column;
+
+  @media #{$mobile} {
+    max-width: 100vw;
+  }
+}
+
+.animationContainer {
+  display: flex;
+  padding: 12px;
+}
+
+.title {
+  color: $title;
+  max-width: 60%;
+  margin-bottom: 40px;
+  font-size: clamp(75px, 11.3333px + 5.1111vw, 200px);
+  text-align: left;
+  @include font-neuMontreal-regular();
+
+  @media #{$mobile} {
+    font-size: 50px;
+    max-width: fit-content;
+  }
+}
+
+.emptyBlock {
+  width: 100%;
+  height: clamp(280px, 189.517px + 9.1954vw, 400px) !important;
+}
+
+.about {
+  display: grid;
+  flex: none;
+  gap: 12px;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(2, minmax(200px, 1fr)) 1.5fr;
+  grid-template-rows: repeat(1, min-content);
+  height: min-content;
+  justify-content: start;
+  overflow: visible;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Внутри 3 колонки */
+  gap: 5px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 24px;
+}
+
+.actionBlock {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(32px);
+  background-color: rgba(194, 194, 191, 0.7);
+  border-radius: 16px;
+  opacity: 1;
+  max-width: 300px;
+  height: 56px;
+  padding: 12px;
+}
+
+.icon {
+  transition: transform 0.1s ease-in-out;
+}

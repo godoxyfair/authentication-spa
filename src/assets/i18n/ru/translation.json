@@ -1,5 +1,19 @@
 {
     "main": {
-        "header": {}
+        "header": "Welcome",
+        "auth": {
+            "from": {
+                "title": "Login",
+                "helpText": "bla bla",
+                "error": "Неправильный логин или пароль",
+                "input": {
+                    "login": "login",
+                    "loginPlaceholder": "Username или email",
+                    "password": "пароль",
+                    "passwordPlaceholder": "Пароль",
+                    "button": "Войти"
+                }
+            }
+        }
     }
 }

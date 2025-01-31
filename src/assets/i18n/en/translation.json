@@ -1,5 +1,19 @@
 {
     "main": {
-        "header": {}
+        "header": "Welcome",
+        "auth": {
+            "from": {
+                "title": "Login",
+                "helpText": "bla bla",
+                "error": "Incorrect login or password",
+                "input": {
+                    "login": "login",
+                    "loginPlaceholder": "Username or email",
+                    "password": "password",
+                    "passwordPlaceholder": "Password",
+                    "button": "Login right now"
+                }
+            }
+        }
     }
 }

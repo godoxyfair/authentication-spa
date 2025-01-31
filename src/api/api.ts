@@ -10,8 +10,8 @@ export const api = createApi({
             mode: 'cors',
             baseUrl: 'http://localhost:8080/',
             prepareHeaders: (headers) => {
-                headers.set('Authorization', 'Bearer ' + localStorage.getItem('token'));
-
+                // headers.set('Authorization', 'Bearer ' + localStorage.getItem('token'));
+                headers.set('Content-type', 'application/json');
                 return headers;
             },
         })(args, api, extraOptions);
