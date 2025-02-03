@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/authentication-spa/static/css/main.c24b1507.css",
-    "main.js": "/authentication-spa/static/js/main.d082c3ea.js",
+    "main.js": "/authentication-spa/static/js/main.d5f7f164.js",
     "static/js/453.4cb97cfd.chunk.js": "/authentication-spa/static/js/453.4cb97cfd.chunk.js",
     "static/media/main.png": "/authentication-spa/static/media/main.b0ba6c1b0de89bb225d0.png",
     "static/media/gallery.png": "/authentication-spa/static/media/gallery.1a3409cde3bc80df9e34.png",
@@ -17,11 +17,11 @@
     "static/media/stars.svg": "/authentication-spa/static/media/stars.dd44398455c6e7bf2b1236d67497d193.svg",
     "index.html": "/authentication-spa/index.html",
     "main.c24b1507.css.map": "/authentication-spa/static/css/main.c24b1507.css.map",
-    "main.d082c3ea.js.map": "/authentication-spa/static/js/main.d082c3ea.js.map",
+    "main.d5f7f164.js.map": "/authentication-spa/static/js/main.d5f7f164.js.map",
     "453.4cb97cfd.chunk.js.map": "/authentication-spa/static/js/453.4cb97cfd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c24b1507.css",
-    "static/js/main.d082c3ea.js"
+    "static/js/main.d5f7f164.js"
   ]
 }
