@@ -1,10 +1,13 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import styles from './styles.module.scss';
+// import styles from './stylesStarts.module.scss';
 import { routes } from './routes';
 
 const browserRouter = createBrowserRouter(routes);
 
+/**
+ * App routers.
+ */
 export const Router: React.FC = () => {
     // const navigate = useNavigate();
 

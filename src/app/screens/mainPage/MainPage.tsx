@@ -1,81 +1,57 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import styles from './styles.module.scss';
-import ReactDOM from 'react-dom';
-import { CometsAnimation } from '../../components';
-import star from '../../../resources/icons/stars.svg';
+import { CometsAnimation, BottomMenu } from '../../components';
+import { useAppMediaQuery } from '../../../hooks/useAppMediaQuery';
+import { ProjectBlock } from '../../components';
+import { useGetInfoQuery } from '../../../api/infoApi';
+import { Spinner } from '../../../ui-library';
+import { ErrorScreen } from '../../components/error/ErrorScreen';
+import { useTranslation } from 'react-i18next';
+import { AboutCompany } from '../../components/aboutSection/AboutCompany';
 
+/**
+ * Main page.
+ */
 export const MainPage: React.FC = () => {
-    const [appLayoutElement, setAppLayoutElement] = useState<HTMLElement | null>(null);
+    const { isMobile } = useAppMediaQuery();
+    const { t } = useTranslation('app', { keyPrefix: 'main.mainPage' });
+    const { data: projectData, isLoading, isError } = useGetInfoQuery();
+    const element = document.getElementById('footer');
 
-    useEffect(() => {
-        const checkElement = () => {
-            const element = document.getElementById('footer-actions');
-            if (element) {
-                setAppLayoutElement(element);
-            }
-        };
+    if (isLoading && element) {
+        element.style.display = 'none';
+        return <Spinner />;
+    }
 
-        checkElement(); // Проверяем сразу
-
-        const observer = new MutationObserver(checkElement);
-        observer.observe(document.body, { childList: true, subtree: true });
-
-        return () => observer.disconnect();
-    }, []);
-
-    const imageRef1 = useRef<HTMLImageElement | null>(null);
-    const imageRef2 = useRef<HTMLImageElement | null>(null);
-
-    useEffect(() => {
-        const scrollContainer = document.getElementById('app-content-wrapper');
-
-        const handleScroll = () => {
-            if (imageRef1.current && imageRef2.current && scrollContainer) {
-                const scrollY = scrollContainer.scrollTop;
-                const rotationDegree = scrollY / 3; // Пропорциональное вращение на основе прокрутки
-                imageRef1.current.style.transform = `rotate(${rotationDegree}deg)`;
-                imageRef2.current.style.transform = `rotate(${rotationDegree}deg)`; // Применяем вращение
-            }
-        };
-
-        scrollContainer?.addEventListener('scroll', handleScroll);
-
-        // Очистка события при размонтировании компонента
-        return () => {
-            scrollContainer?.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    if (isError && element) {
+        element.style.display = 'none';
+        return <ErrorScreen />;
+    }
 
     return (
         <div className={styles.container}>
             <div className={styles.animationContainer}>
-                <h1 className={styles.title}>Building bold webs for brave companies</h1>
+                <h1 className={styles.title}>{t('title')}</h1>
                 <CometsAnimation />
             </div>
             <div className={styles.emptyBlock} />
             <div className={styles.about}>
-                <p>DUTIES IS A DESIGN STUDIO AND PARTNER</p>
-                <div className={styles.child}>
-                    <p>WE HELP YOU:</p>
-                    <div className={styles.textContainer}>
-                        <p>— Define your UI-interface</p>
-                        <p>— Design your layout</p>
-                        <p>— Deploy your App</p>
-                    </div>
-                </div>
-                <p style={{ justifySelf: 'end' }}>CURRENTLY: Berlin. Germany</p>
-            </div>
-            {!!appLayoutElement &&
-                ReactDOM.createPortal(
-                    <div className={styles.blockContainer}>
-                        <div className={styles.actionBlock}>
-                            <img ref={imageRef1} alt='icon' className={styles.icon} height={24} src={star} width={24} />
-                            <img ref={imageRef2} alt='icon' className={styles.icon} height={24} src={star} width={24} />
-                            <p>Papapapappapaapappapapa</p>
+                <p>{t('description.title')}</p>
+                {!isMobile && (
+                    <div className={styles.child}>
+                        <p>{t('description.help')}</p>
+                        <div className={styles.textContainer}>
+                            <p>{t('description.text1')}</p>
+                            <p>{t('description.text2')}</p>
+                            <p>{t('description.text3')}</p>
                         </div>
-                    </div>,
-                    appLayoutElement,
+                    </div>
                 )}
+                <p className={styles.place}>{t('description.location')}</p>
+            </div>
+            {projectData?.map((item) => <ProjectBlock key={item.id} item={item} />)}
+            <AboutCompany />
+            <BottomMenu />
         </div>
     );
 };

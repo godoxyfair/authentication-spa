@@ -3,7 +3,7 @@
         "header": "Welcome",
         "auth": {
             "from": {
-                "title": "Login",
+                "title": "Вход",
                 "helpText": "bla bla",
                 "error": "Неправильный логин или пароль",
                 "input": {
@@ -13,6 +13,26 @@
                     "passwordPlaceholder": "Пароль",
                     "button": "Войти"
                 }
+            }
+        },
+        "errorScreen": {
+            "title": "Что-то пошло не так"
+        },
+        "mainPage": {
+            "title": "Создадем web приложения для смелых компаний",
+            "description": {
+                "title": "SMOOTH - ДИЗАЙН-СТУДИЯ И ВАШ ПАРНТЕР",
+                "help": "МЫ МОЖЕМ:",
+                "text1": "— Разработать UI-interface",
+                "text2": "— Создать дизайн",
+                "text3": "— Разработать приложение",
+                "location": "МЫ НАХОДИМСЯ: Берлин. Германия"
+            },
+            "bottomMenu": {
+                "title": "Проекты"
+            },
+            "projectInfo": {
+                "link": "Посмотреть проект"
             }
         }
     }

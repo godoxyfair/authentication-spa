@@ -1,0 +1,44 @@
+@import '../styles/colors.module.scss';
+
+.input {
+  display: flex;
+  outline: unset;
+  width: 100%;
+  border: 1px solid $black;
+  border-radius: 8px;
+  height: 34px;
+  padding: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  line-height: 22px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $element-border;
+    box-shadow: 0 0 2px 2px $element-focus;
+  }
+
+  &:hover {
+    outline: none;
+    border: 2px solid $element-border;
+    box-shadow: 0 0 2px 2px $element-focus;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: $label-text;
+}
+
+.error {
+  color: $error ;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  height: 16px;
+}

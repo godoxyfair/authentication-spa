@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
+/**
+ * Paint animation for desktop.
+ */
 export const PaintAnimation: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const dropsRef = useRef<{ x: number; y: number; radius: number; color: string; speed: number; trail: any[] }[]>([]);

@@ -10,6 +10,9 @@ type InkBlot = {
     color?: string;
 };
 
+/**
+ * Starts animation for mobile.
+ */
 export const SkyAnimation: FunctionComponent = () => {
     const [stars, setStars] = useState<InkBlot[]>([]);
 

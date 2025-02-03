@@ -6,7 +6,7 @@ import logo from '../../../../resources/icons/logo.svg';
 import { useAppMediaQuery } from '../../../../hooks/useAppMediaQuery';
 
 /**
- * Контент хэдера приложения.
+ * Header content wrapper.
  */
 export const HeaderContent: React.FC = () => {
     const { isMobile } = useAppMediaQuery();

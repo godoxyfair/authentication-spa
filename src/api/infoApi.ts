@@ -1,14 +1,12 @@
 import { api } from './api';
-import { InfomationResponseDTO } from './types';
+import { InformationResponseDTO } from './types';
 
 const infoUrl = '/info';
 
 export const infoApi = api.injectEndpoints({
     endpoints: (builder) => ({
-        getInfo: builder.query<InfomationResponseDTO, void>({
-            query: () => ({
-                url: `${infoUrl}`,
-            }),
+        getInfo: builder.query<InformationResponseDTO, void>({
+            query: () => `${infoUrl}`,
         }),
     }),
     overrideExisting: false,

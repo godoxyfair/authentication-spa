@@ -1,0 +1,24 @@
+@import 'src/ui-library/styles/colors.module.scss';
+@import 'src/ui-library/styles/typography.module.scss';
+@import 'src/ui-library/styles/variables.module.scss';
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error {
+    color: $title;
+    max-width: 60%;
+    font-size: clamp(75px, 11.3333px + 5.1111vw, 200px);
+    text-align: center;
+    @include font-neuMontreal-regular();
+
+    @media #{$mobile} {
+        font-size: 50px;
+        max-width: fit-content;
+        z-index: 1;
+    }
+}

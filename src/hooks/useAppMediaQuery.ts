@@ -13,7 +13,7 @@ export enum EBreakpoint {
 }
 
 /**
- * Хук для идентификации разрешения экрана клиента.
+ * Hook for identifying the client screen resolution.
  */
 export const useAppMediaQuery = (): IMediaQueryReturnType => {
     const isMobile = useMediaQuery({ query: `(max-width: ${EBreakpoint.TABLET - 1}px)` });

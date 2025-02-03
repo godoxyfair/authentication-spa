@@ -1,15 +1,13 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 import miniLogo from '../../../../resources/icons/logo.svg';
 import { useAppMediaQuery } from '../../../../hooks/useAppMediaQuery';
 
 /**
- * Контент футера приложения.
+ * Footer content wrapper
  */
 export const FooterContent: React.FC = () => {
     const { isMobile } = useAppMediaQuery();
-    const { t } = useTranslation('app');
 
     if (isMobile) {
         return null;

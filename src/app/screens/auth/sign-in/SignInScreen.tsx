@@ -1,14 +1,14 @@
 import React from 'react';
 import { FunctionComponent } from 'react';
-import { SignInForm } from '../../../components/singIn/SingInForm';
-import { ToggleLanguageButton } from '../../../components/localization';
 import styles from './styles.module.scss';
-import { SkyAnimation } from '../../../components';
-import { PaintAnimation } from '../../../components';
+import { SkyAnimation, PaintAnimation, ToggleLanguageButton, SignInForm } from '../../../components';
 import { useAppMediaQuery } from '../../../../hooks/useAppMediaQuery';
 import { Navigate } from 'react-router-dom';
 import { ROUTE } from '../../../router/routesName';
 
+/**
+ * Authentication page.
+ */
 export const SignInScreen: FunctionComponent = () => {
     const { isMobile } = useAppMediaQuery();
     const status = localStorage.getItem('status');

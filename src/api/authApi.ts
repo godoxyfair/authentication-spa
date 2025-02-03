@@ -15,8 +15,12 @@ export const signApi = api.injectEndpoints({
                 },
             }),
             async onQueryStarted(body, { dispatch, queryFulfilled }) {
-                const { data } = await queryFulfilled;
-                localStorage.setItem('status', data.status);
+                try {
+                    const { data } = await queryFulfilled;
+                    localStorage.setItem('status', data.status);
+                } catch (error) {
+                    console.log(error);
+                }
             },
         }),
     }),

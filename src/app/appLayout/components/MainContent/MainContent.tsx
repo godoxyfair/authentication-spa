@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 /**
- * Основной контент приложения.
+ * Main content wrapper.
  */
 export const MainContent: React.FC = () => {
     return (

@@ -14,6 +14,26 @@
                     "button": "Login right now"
                 }
             }
+        },
+        "errorScreen": {
+            "title": "Something went wrong"
+        },
+        "mainPage": {
+            "title": "Building bold webs for brave companies",
+            "description": {
+                "title": "SMOOTH IS A DESIGN STUDIO AND PARTNER",
+                "help": "WE HELP YOU:",
+                "text1": "— Define your UI-interface",
+                "text2": "— Design your layout",
+                "text3": "— Deploy your App",
+                "location": "CURRENTLY: Berlin. Germany"
+            },
+            "bottomMenu": {
+                "title": "Projects"
+            },
+            "projectInfo": {
+                "link": "View project"
+            }
         }
     }
 }

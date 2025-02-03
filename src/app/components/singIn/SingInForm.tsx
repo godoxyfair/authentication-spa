@@ -4,16 +4,21 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 import { AuthRequestDtoValidationSchema } from './authValidation';
-import { LoginInput } from './components/loginInput/LoginInput';
-import { PasswordInput } from './components/loginInput/PasswordInput';
+import { LoginInput, PasswordInput } from './components';
 import { useSignInMutation } from '../../../api/authApi';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '../../../ui-library';
+import { ROUTE } from '../../router/routesName';
+import cn from 'classnames';
 
 export type SignInFormInputs = {
     login: string;
     password: string;
 };
 
+/**
+ * Authentication form.
+ */
 export const SignInForm: FunctionComponent = () => {
     const methods = useForm<SignInFormInputs>({ reValidateMode: 'onSubmit', resolver: AuthRequestDtoValidationSchema });
 
@@ -31,71 +36,32 @@ export const SignInForm: FunctionComponent = () => {
 
     const onSubmit = async (data: SignInFormInputs) => {
         try {
-            await signInMutation({ login: data.login, password: data.password });
-            navigate('/main');
-        } catch (e) {
+            await signInMutation({ login: data.login, password: data.password }).unwrap();
+            navigate(ROUTE.MAIN.FULL_PATH);
+        } catch (error) {
             setError('password', { message: t('from.error') });
+            console.log('error');
         }
     };
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                // position: 'relative',
-            }}
-        >
-            {/*<CometsAnimation />*/}
-            <div
-                style={{
-                    minHeight: '400px',
-                    minWidth: '400px',
-                    borderRadius: '100px',
-                    backgroundColor: 'rgba(65, 222, 157, 0.4)',
-                    opacity: '0.6',
-                    position: 'absolute',
-                    top: '50%',
-                    right: '50%',
-                    transform: 'translate(50%, -50%)',
-                }}
-            />
-            <div
-                style={{
-                    minHeight: '400px',
-                    minWidth: '400px',
-                    borderRadius: '100px',
-                    backgroundColor: 'rgba(65, 222, 157, 0.4)',
-                    opacity: '0.6',
-                    position: 'absolute',
-                    top: '50%',
-                    right: '50%',
-                    transform: 'translate(50%, -50%)',
-                    rotate: '10deg',
-                }}
-            />
+        <div className={styles.formContainer}>
+            <div className={styles.futter} />
+            <div className={cn(styles.futter, styles.futterRot)} />
             <form onSubmit={handleSubmit(onSubmit)} className={styles.from}>
-                <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '16px', textAlign: 'center' }}>
-                    {t('from.title')}
-                </h2>
+                <h2 className={styles.title}>{t('from.title')}</h2>
                 <LoginInput
-                    // label={t('from.input.login')}
                     placeholder={t('from.input.loginPlaceholder')}
                     {...register('login')}
                     error={errors.login}
                 />
 
                 <PasswordInput
-                    // label={t('from.input.password')}
                     placeholder={t('from.input.passwordPlaceholder')}
                     {...register('password')}
                     error={errors.password}
                 />
-
-                <button type='submit' className={styles.button}>
-                    {isSubmitting ? 'loading' : t('from.input.button')}
-                </button>
+                <Button type='submit' loading={isSubmitting} title={t('from.input.button')} />
             </form>
         </div>
     );

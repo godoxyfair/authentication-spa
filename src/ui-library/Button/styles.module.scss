@@ -1,0 +1,34 @@
+@import 'src/ui-library/styles/colors.module.scss';
+
+.button {
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+
+    &:not(&:disabled) {
+        cursor: pointer;
+    }
+
+    &:hover {
+        border: 2px solid $element-border;
+        box-shadow: 0 0 2px 2px $element-focus;
+    }
+}
+
+.loading {
+    border: 2px solid $shadow;
+    box-shadow: 0 0 1px 1px $disabled;
+
+    &:hover {
+        border: 2px solid $shadow;
+        box-shadow: 0 0 1px 1px $disabled;
+    }
+}
+

@@ -1,20 +1,23 @@
 import React from 'react';
-import cn from 'classnames';
 import { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../../../../ui-components/Button';
-import styles from './styles.module.scss';
-import { ToggleLanguageButtonProps } from './ToggleLanguageButtonProps';
+import { Button } from '../../../../ui-library';
 import { getCurrentLanguage, invertLanguage } from '../../../i18nUtils';
 
-export const ToggleLanguageButton: FunctionComponent<ToggleLanguageButtonProps> = (props) => {
+type Props = {
+    className?: string;
+};
+
+/**
+ * Toggle language button.
+ */
+export const ToggleLanguageButton: FunctionComponent<Props> = (props: Props) => {
     const { i18n } = useTranslation();
     const currentLanguage = getCurrentLanguage(i18n);
 
     const handleClick = async () => {
         await i18n.changeLanguage(invertLanguage(currentLanguage));
-        console.log(i18n.language);
     };
 
-    return <Button onClick={handleClick} className={cn(styles.button)} title={currentLanguage} />;
+    return <Button onClick={handleClick} className={props.className} title={invertLanguage(currentLanguage)} />;
 };

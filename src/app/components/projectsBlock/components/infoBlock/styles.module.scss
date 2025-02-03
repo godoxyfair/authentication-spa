@@ -1,0 +1,153 @@
+@import 'src/ui-library/styles/variables.module.scss';
+@import 'src/ui-library/styles/typography.module.scss';
+@import 'src/ui-library/styles/colors.module.scss';
+
+.infoContainerGrid {
+  display: grid;
+  gap: 12px;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1, min-content);
+  height: min-content;
+  justify-content: start;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+
+  @media #{$mobile} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    padding: 0;
+    gap: 8px;
+  }
+}
+
+.projectInfoGrid {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  height: min-content;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 12px 0;
+  position: relative;
+  width: 100%;
+
+  @media #{$mobile} {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    padding: 0;
+    gap: 8px;
+    grid-auto-rows: min-content;
+  }
+}
+
+.title {
+  color: $title;
+  font-size: clamp(30px, 11.3333px + 5.1111vw, 40px);
+  text-wrap: auto;
+  text-align: left;
+  width: fit-content;
+
+  @include font-neuMontreal-regular();
+
+  @media #{$mobile} {
+    max-width: fit-content;
+    z-index: 1;
+  }
+}
+
+.tabloContainer {
+  width: 100%;
+  max-width: 300px;
+  height: min-content;
+  padding: 5px 0;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(194, 194, 191, 0.3);
+  border-radius: 4px;
+  opacity: 1;
+  color: $title;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.tabloText {
+  display: flex;
+  animation: marquee 10s linear infinite;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-right: 6px;
+    margin-left: 6px;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $title;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.linkContainer {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: min-content;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 12px 0;
+  position: relative;
+
+  @media #{$mobile} {
+    justify-self: start;
+  }
+}
+
+.link {
+  display: flex;
+  gap: 12px;
+  background-color: $shadow;
+  color: #FFFFFF;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  align-items: center;
+
+  a:visited {
+    color: #FFFFFF;
+  }
+}
+
+.link:hover {
+  background-color: $star;
+  transition: 0.2s;
+}
+
+.icon {
+  svg {
+    color: #FFFFFF;
+  }
+}

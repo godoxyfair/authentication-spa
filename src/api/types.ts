@@ -3,7 +3,13 @@ export type AuthRequestDto = {
     password: string;
 };
 
-export type InfomationResponseDTO = {
+export type InformationDTO = {
+    id: string;
     title: string;
     aboutText: string;
+    images: Array<string>;
+    stack: string;
+    link: string;
 };
+
+export type InformationResponseDTO = Array<InformationDTO>;

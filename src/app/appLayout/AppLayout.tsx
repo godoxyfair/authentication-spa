@@ -11,24 +11,12 @@ import { Navigate } from 'react-router-dom';
 import { ROUTE } from '../router/routesName';
 
 /**
- * Главный лэйаут приложения.
+ * Main layout of the application.
  */
 export const AppLayout: React.FC = () => {
-    // const isLoading = isAuthoritiesLoading || isPrincipalsLoading || isOrganizationsLoading || isLoadingGetAgreements;
-    // const isError = isPrincipalsError || isOrganizationsError || isErrorGetAgreements;
-
-    // const { isMobile } = useAppMediaQuery();
     const status = localStorage.getItem('status');
 
     const renderContent = () => {
-        // if (isLoading) {
-        //     return <Spinner />;
-        // }
-
-        // if (isError) {
-        //     return <AppUnavailable />;
-        // }
-
         if (!status) {
             return <Navigate to={ROUTE.AUTH.FULL_PATH} />;
         }
@@ -38,6 +26,7 @@ export const AppLayout: React.FC = () => {
                 <Header hidden>
                     <HeaderContent />
                 </Header>
+
                 <AppContentWrapper>
                     <Main>
                         <MainContent />
