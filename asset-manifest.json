@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/authentication-spa/static/css/main.c24b1507.css",
-    "main.js": "/authentication-spa/static/js/main.1c59c7c6.js",
-    "static/js/453.a577df6d.chunk.js": "/authentication-spa/static/js/453.a577df6d.chunk.js",
-    "static/media/main.png": "/authentication-spa/static/media/main.b0ba6c1b0de89bb225d0.png",
-    "static/media/gallery.png": "/authentication-spa/static/media/gallery.1a3409cde3bc80df9e34.png",
-    "static/media/foto-gallery.png": "/authentication-spa/static/media/foto-gallery.20d1fb127dbf9c336bc7.png",
-    "static/media/DelaGothicOne-Regular.ttf": "/authentication-spa/static/media/DelaGothicOne-Regular.a8761c8c6d54ccaa44db.ttf",
-    "static/media/OTP-bank.png": "/authentication-spa/static/media/OTP-bank.3a9d9aca26455b586b4b.png",
-    "static/media/otp-web.png": "/authentication-spa/static/media/otp-web.c4517107bc26f243644c.png",
-    "static/media/OTP-app.png": "/authentication-spa/static/media/OTP-app.064d2ddc1daefe360fc0.png",
-    "static/media/Roboto-VariableFont_wdth,wght.ttf": "/authentication-spa/static/media/Roboto-VariableFont_wdth,wght.3c9d0f6513f7cfe91016.ttf",
-    "static/media/PPNeueMontrealMono-Medium.otf": "/authentication-spa/static/media/PPNeueMontrealMono-Medium.1e57f670f951789526ad.otf",
-    "static/media/PPNeueMontrealMono-RegularItalic.otf": "/authentication-spa/static/media/PPNeueMontrealMono-RegularItalic.5306bcced2c56a173852.otf",
-    "static/media/logo.svg": "/authentication-spa/static/media/logo.2bd78ddf81914d7650436c883725a768.svg",
-    "static/media/stars.svg": "/authentication-spa/static/media/stars.dd44398455c6e7bf2b1236d67497d193.svg",
-    "index.html": "/authentication-spa/index.html",
-    "main.c24b1507.css.map": "/authentication-spa/static/css/main.c24b1507.css.map",
-    "main.1c59c7c6.js.map": "/authentication-spa/static/js/main.1c59c7c6.js.map",
-    "453.a577df6d.chunk.js.map": "/authentication-spa/static/js/453.a577df6d.chunk.js.map"
+    "main.css": "/portfolio-card/authentication-spa/static/css/main.a2396fb5.css",
+    "main.js": "/portfolio-card/authentication-spa/static/js/main.46b84499.js",
+    "static/js/453.a577df6d.chunk.js": "/portfolio-card/authentication-spa/static/js/453.a577df6d.chunk.js",
+    "static/media/main.png": "/portfolio-card/authentication-spa/static/media/main.b0ba6c1b0de89bb225d0.png",
+    "static/media/gallery.png": "/portfolio-card/authentication-spa/static/media/gallery.1a3409cde3bc80df9e34.png",
+    "static/media/foto-gallery.png": "/portfolio-card/authentication-spa/static/media/foto-gallery.20d1fb127dbf9c336bc7.png",
+    "static/media/DelaGothicOne-Regular.ttf": "/portfolio-card/authentication-spa/static/media/DelaGothicOne-Regular.a8761c8c6d54ccaa44db.ttf",
+    "static/media/OTP-bank.png": "/portfolio-card/authentication-spa/static/media/OTP-bank.3a9d9aca26455b586b4b.png",
+    "static/media/otp-web.png": "/portfolio-card/authentication-spa/static/media/otp-web.c4517107bc26f243644c.png",
+    "static/media/OTP-app.png": "/portfolio-card/authentication-spa/static/media/OTP-app.064d2ddc1daefe360fc0.png",
+    "static/media/Roboto-VariableFont_wdth,wght.ttf": "/portfolio-card/authentication-spa/static/media/Roboto-VariableFont_wdth,wght.3c9d0f6513f7cfe91016.ttf",
+    "static/media/PPNeueMontrealMono-Medium.otf": "/portfolio-card/authentication-spa/static/media/PPNeueMontrealMono-Medium.1e57f670f951789526ad.otf",
+    "static/media/PPNeueMontrealMono-RegularItalic.otf": "/portfolio-card/authentication-spa/static/media/PPNeueMontrealMono-RegularItalic.5306bcced2c56a173852.otf",
+    "static/media/logo.svg": "/portfolio-card/authentication-spa/static/media/logo.2bd78ddf81914d7650436c883725a768.svg",
+    "static/media/stars.svg": "/portfolio-card/authentication-spa/static/media/stars.dd44398455c6e7bf2b1236d67497d193.svg",
+    "index.html": "/portfolio-card/authentication-spa/index.html",
+    "main.a2396fb5.css.map": "/portfolio-card/authentication-spa/static/css/main.a2396fb5.css.map",
+    "main.46b84499.js.map": "/portfolio-card/authentication-spa/static/js/main.46b84499.js.map",
+    "453.a577df6d.chunk.js.map": "/portfolio-card/authentication-spa/static/js/453.a577df6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c24b1507.css",
-    "static/js/main.1c59c7c6.js"
+    "static/css/main.a2396fb5.css",
+    "static/js/main.46b84499.js"
   ]
 }
