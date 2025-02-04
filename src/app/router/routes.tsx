@@ -7,7 +7,7 @@ import { ROUTE } from './routesName';
 
 export const routes: RouteObject[] = [
     {
-        path: `${ROUTE.AUTH.FULL_PATH}/*`,
+        path: `${ROUTE.AUTH.FULL_PATH}`,
         element: <SignInScreen />,
     },
     {
@@ -17,10 +17,10 @@ export const routes: RouteObject[] = [
         children: [
             {
                 path: '/',
-                element: <Navigate to={`${ROUTE.MAIN.FULL_PATH}/*`} />,
+                element: <Navigate to={`${ROUTE.MAIN.FULL_PATH}`} />,
             },
             {
-                path: `${ROUTE.MAIN.FULL_PATH}/*`,
+                path: `${ROUTE.MAIN.PATH}`,
                 element: <MainPage />,
             },
         ],

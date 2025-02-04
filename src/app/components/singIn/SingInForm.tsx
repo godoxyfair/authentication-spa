@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 import { AuthRequestDtoValidationSchema } from './authValidation';
 import { LoginInput, PasswordInput } from './components';
-import { useSignInMutation } from '../../../api/authApi';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../../ui-library';
 import { ROUTE } from '../../router/routesName';
 import cn from 'classnames';
+import { signInData } from '../../../api/mocks/mockData';
 
 export type SignInFormInputs = {
     login: string;
@@ -23,7 +23,7 @@ export const SignInForm: FunctionComponent = () => {
     const methods = useForm<SignInFormInputs>({ reValidateMode: 'onSubmit', resolver: AuthRequestDtoValidationSchema });
 
     const navigate = useNavigate();
-    const [signInMutation] = useSignInMutation();
+    // const [signInMutation] = useSignInMutation();
 
     const {
         handleSubmit,
@@ -35,10 +35,19 @@ export const SignInForm: FunctionComponent = () => {
     const { t } = useTranslation('app', { keyPrefix: 'main.auth' });
 
     const onSubmit = async (data: SignInFormInputs) => {
-        try {
-            await signInMutation({ login: data.login, password: data.password }).unwrap();
-            navigate(ROUTE.MAIN.FULL_PATH);
-        } catch (error) {
+        // try {
+        //     await signInMutation({ login: data.login, password: data.password }).unwrap();
+        //     navigate(ROUTE.MAIN.FULL_PATH);
+        // } catch (error) {
+        //     setError('password', { message: t('from.error') });
+        //     console.log('error');
+        // }
+        if (data.login === signInData.login && data.password === signInData.password) {
+            setTimeout(() => {
+                localStorage.setItem('status', 'authorised');
+                navigate(ROUTE.MAIN.FULL_PATH);
+            }, 3000);
+        } else {
             setError('password', { message: t('from.error') });
             console.log('error');
         }

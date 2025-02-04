@@ -29,12 +29,9 @@ export const InfoBlock: React.FC<Props> = (props: Props) => {
                 </div>
             </div>
             <div className={styles.linkContainer}>
-                <div className={styles.link}>
-                    <a href={item.link} target='_blank' rel='noopener noreferrer'>
-                        {t('projectInfo.link')}
-                    </a>
-                    <ArrowRight height={'20'} width={'20'} />
-                </div>
+                <a href={item.link} className={styles.link} target='_blank' rel='noopener noreferrer'>
+                    {t('projectInfo.link')} <ArrowRight height={'20'} width={'20'} />
+                </a>
             </div>
         </div>
     );

@@ -10,7 +10,13 @@ import { worker } from './api/mocks/server';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 async function enableMocking() {
-    await worker.start();
+    if (process.env.NODE_ENV === 'development') {
+        await worker.start({
+            serviceWorker: {
+                url: '/authentication-spa/mockServiceWorker.js',
+            },
+        });
+    }
 }
 
 enableMocking().then(() => {

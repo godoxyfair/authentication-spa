@@ -136,9 +136,10 @@
   font-family: Roboto, sans-serif;
   align-items: center;
 
-  a:visited {
+  a, a:hover, a:visited, a:visited:hover {
     color: #FFFFFF;
   }
+
 }
 
 .link:hover {
