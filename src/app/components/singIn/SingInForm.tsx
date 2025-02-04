@@ -21,14 +21,14 @@ export type SignInFormInputs = {
  */
 export const SignInForm: FunctionComponent = () => {
     const methods = useForm<SignInFormInputs>({ reValidateMode: 'onSubmit', resolver: AuthRequestDtoValidationSchema });
-
+    const [isLoading, setIsLoading] = React.useState(false);
     const navigate = useNavigate();
     // const [signInMutation] = useSignInMutation();
 
     const {
         handleSubmit,
         register,
-        formState: { errors, isSubmitting },
+        formState: { errors },
         setError,
     } = methods;
 
@@ -43,7 +43,9 @@ export const SignInForm: FunctionComponent = () => {
         //     console.log('error');
         // }
         if (data.login === signInData.login && data.password === signInData.password) {
+            setIsLoading(true);
             setTimeout(() => {
+                setIsLoading(false);
                 localStorage.setItem('status', 'authorised');
                 navigate(ROUTE.MAIN.FULL_PATH);
             }, 3000);
@@ -70,7 +72,7 @@ export const SignInForm: FunctionComponent = () => {
                     {...register('password')}
                     error={errors.password}
                 />
-                <Button type='submit' loading={isSubmitting} title={t('from.input.button')} />
+                <Button type='submit' loading={isLoading} title={t('from.input.button')} />
             </form>
         </div>
     );
