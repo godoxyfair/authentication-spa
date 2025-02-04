@@ -4,6 +4,9 @@ import styles from './styles.module.scss';
 import star from '../../../resources/icons/stars.svg';
 import { ToggleLanguageButton } from '../localization';
 import { useTranslation } from 'react-i18next';
+import { Button } from '../../../ui-library';
+import { ROUTE } from '../../router/routesName';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * Bottom sticky footer component.
@@ -12,6 +15,7 @@ export const BottomMenu: React.FC = () => {
     const [appLayoutElement, setAppLayoutElement] = useState<HTMLElement | null>(null);
 
     const { t } = useTranslation('app', { keyPrefix: 'main.mainPage' });
+    const navigate = useNavigate();
 
     useEffect(() => {
         const checkElement = () => {
@@ -50,6 +54,12 @@ export const BottomMenu: React.FC = () => {
             scrollContainer?.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const handleLogOut = () => {
+        localStorage.removeItem('status');
+        navigate(ROUTE.AUTH.FULL_PATH);
+    };
+
     return (
         <>
             {!!appLayoutElement &&
@@ -60,6 +70,7 @@ export const BottomMenu: React.FC = () => {
                             <img ref={imageRef2} alt='icon' className={styles.icon} height={24} src={star} width={24} />
                             <p>{t('bottomMenu.title')}</p>
                             <ToggleLanguageButton className={styles.button} />
+                            <Button onClick={handleLogOut} className={styles.button} title={'LogOut'} />
                         </div>
                     </div>,
                     appLayoutElement,
