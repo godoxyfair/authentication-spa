@@ -51,12 +51,14 @@ export const SignInForm: FunctionComponent = () => {
             <form onSubmit={handleSubmit(onSubmit)} className={styles.from}>
                 <h2 className={styles.title}>{t('from.title')}</h2>
                 <LoginInput
+                    label={t('from.input.loginPlaceholder')}
                     placeholder={t('from.input.loginPlaceholder')}
                     {...register('login')}
                     error={errors.login}
                 />
 
                 <PasswordInput
+                    label={t('from.input.passwordPlaceholder')}
                     placeholder={t('from.input.passwordPlaceholder')}
                     {...register('password')}
                     error={errors.password}

@@ -8,7 +8,7 @@ type Props = { label?: string; labelClass?: string; error?: FieldError } & Input
  * Password input.
  */
 export const PasswordInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
-    return <InputForm type='text' id='password' ref={ref} {...props} />;
+    return <InputForm type='password' autoComplete='current-password' id='password' ref={ref} {...props} />;
 });
 
 PasswordInput.displayName = 'PasswordInput';
