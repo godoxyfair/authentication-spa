@@ -15,7 +15,7 @@ code {
 @font-face {
   font-family: Roboto;
   font-weight: 400;
-  src: url('/src/resources/font/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/src/resources/font/Roboto-Regular.woff2') format('truetype');
 }
 
 * {

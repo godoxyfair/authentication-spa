@@ -1,10 +1,10 @@
 import { AuthRequestDto, InformationResponseDTO } from '../types';
-import imgOTPBank from '../../resources/images/otp/OTP-bank.png';
-import imgOTPApp from '../../resources/images/otp/OTP-app.png';
-import imgOTPWeb from '../../resources/images/otp/otp-web.png';
-import imgGallery from '../../resources/images/museum/gallery.png';
-import imgFoto from '../../resources/images/museum/foto-gallery.png';
-import imgMain from '../../resources/images/museum/main.png';
+import imgOTPBank from '../../resources/images/otp/OTP-bank.webp';
+import imgOTPApp from '../../resources/images/otp/OTP-app.webp';
+import imgOTPWeb from '../../resources/images/otp/otp-web.webp';
+import imgGallery from '../../resources/images/museum/gallery.webp';
+import imgFoto from '../../resources/images/museum/foto-gallery.webp';
+import imgMain from '../../resources/images/museum/main.webp';
 
 export const signInData: AuthRequestDto = {
     login: 'NewTestUser',

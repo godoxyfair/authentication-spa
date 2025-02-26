@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import styles from './styles.module.scss';
 import { CometsAnimation, BottomMenu } from '../../components';
 import { useAppMediaQuery } from '../../../hooks/useAppMediaQuery';
 import { ProjectBlock } from '../../components';
 import { useGetInfoQuery } from '../../../api/infoApi';
 import { Spinner } from '../../../ui-library';
-import { ErrorScreen } from '../../components/error/ErrorScreen';
 import { useTranslation } from 'react-i18next';
 import { AboutCompany } from '../../components/aboutSection/AboutCompany';
 
@@ -13,6 +12,8 @@ import { AboutCompany } from '../../components/aboutSection/AboutCompany';
  * Main page.
  */
 export const MainPage: React.FC = () => {
+    const ErrorScreen = lazy(() => import('../../components/error/ErrorScreen'));
+
     const { isMobile } = useAppMediaQuery();
     const { t } = useTranslation('app', { keyPrefix: 'main.mainPage' });
     const { data: projectData, isLoading, isError } = useGetInfoQuery();

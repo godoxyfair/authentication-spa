@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { useTranslation } from 'react-i18next';
 
-export const ErrorScreen: React.FC = () => {
+const ErrorScreen: React.FC = () => {
     const { t } = useTranslation('app', { keyPrefix: 'main.errorScreen' });
 
     return (
@@ -11,3 +11,5 @@ export const ErrorScreen: React.FC = () => {
         </div>
     );
 };
+
+export default ErrorScreen;

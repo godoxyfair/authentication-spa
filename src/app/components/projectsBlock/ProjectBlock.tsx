@@ -22,12 +22,12 @@ export const ProjectBlock: React.FC<Props> = (props: Props) => {
                     {!isMobile ? (
                         item.images.map((img) => (
                             <div className={styles.gridContainer} key={img}>
-                                <img alt='icon' src={img} />
+                                <img loading='lazy' alt='icon' src={img} />
                             </div>
                         ))
                     ) : (
                         <div className={styles.gridContainer} key={item.images[0]}>
-                            <img alt='icon' src={item.images[0]} />
+                            <img alt='icon' loading='lazy' src={item.images[0]} />
                         </div>
                     )}
                 </div>
