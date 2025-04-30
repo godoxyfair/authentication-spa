@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/authentication-spa/static/css/main.c15719d4.css",
-    "main.js": "/authentication-spa/static/js/main.d9ca922c.js",
+    "main.js": "/authentication-spa/static/js/main.f007157b.js",
     "static/css/434.47bea253.chunk.css": "/authentication-spa/static/css/434.47bea253.chunk.css",
     "static/js/434.9b236943.chunk.js": "/authentication-spa/static/js/434.9b236943.chunk.js",
     "static/js/453.a577df6d.chunk.js": "/authentication-spa/static/js/453.a577df6d.chunk.js",
@@ -18,13 +18,13 @@
     "static/media/stars.svg": "/authentication-spa/static/media/stars.dd44398455c6e7bf2b1236d67497d193.svg",
     "index.html": "/authentication-spa/index.html",
     "main.c15719d4.css.map": "/authentication-spa/static/css/main.c15719d4.css.map",
-    "main.d9ca922c.js.map": "/authentication-spa/static/js/main.d9ca922c.js.map",
+    "main.f007157b.js.map": "/authentication-spa/static/js/main.f007157b.js.map",
     "434.47bea253.chunk.css.map": "/authentication-spa/static/css/434.47bea253.chunk.css.map",
     "434.9b236943.chunk.js.map": "/authentication-spa/static/js/434.9b236943.chunk.js.map",
     "453.a577df6d.chunk.js.map": "/authentication-spa/static/js/453.a577df6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c15719d4.css",
-    "static/js/main.d9ca922c.js"
+    "static/js/main.f007157b.js"
   ]
 }
