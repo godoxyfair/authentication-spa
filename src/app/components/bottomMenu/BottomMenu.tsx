@@ -70,7 +70,7 @@ export const BottomMenu: React.FC = () => {
                             <img ref={imageRef2} alt='icon' className={styles.icon} height={24} src={star} width={24} />
                             <p>{t('bottomMenu.title')}</p>
                             <ToggleLanguageButton className={styles.button} />
-                            <Button onClick={handleLogOut} className={styles.button} title={'LogOut'} />
+                            {/*<Button onClick={handleLogOut} className={styles.button} title={'LogOut'} />*/}
                         </div>
                     </div>,
                     appLayoutElement,
