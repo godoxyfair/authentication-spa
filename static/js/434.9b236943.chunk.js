@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkauthentication_spa=self.webpackChunkauthentication_spa||[]).push([[434],{434:(e,s,t)=>{t.r(s),t.d(s,{default:()=>i});t(43);const a="styles_container__uuvJx",n="styles_error__Djyqt";var r=t(117),c=t(579);const i=()=>{const{t:e}=(0,r.Bd)("app",{keyPrefix:"main.errorScreen"});return(0,c.jsx)("div",{className:a,children:(0,c.jsx)("h1",{className:n,children:e("title")})})}}}]);
-//# sourceMappingURL=434.9b236943.chunk.js.map

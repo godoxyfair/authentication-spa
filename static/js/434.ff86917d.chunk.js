@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksmooth_design=self.webpackChunksmooth_design||[]).push([[434],{434:(e,s,r)=>{r.r(s),r.d(s,{default:()=>i});r(43);const t="styles_container__uuvJx",n="styles_error__Djyqt";var c=r(117),a=r(579);const i=()=>{const{t:e}=(0,c.Bd)("app",{keyPrefix:"main.errorScreen"});return(0,a.jsx)("div",{className:t,children:(0,a.jsx)("h1",{className:n,children:e("title")})})}}}]);
+//# sourceMappingURL=434.ff86917d.chunk.js.map
