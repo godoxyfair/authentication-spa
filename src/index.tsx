@@ -8,7 +8,7 @@ import { store } from './redux/store';
 import { worker } from './api/mocks/server';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-
+localStorage.setItem('status', 'authorised');
 async function enableMocking() {
     if (process.env.NODE_ENV === 'development') {
         await worker.start({
